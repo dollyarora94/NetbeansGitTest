@@ -49,7 +49,7 @@
         <th width="280px">Action</th>
 
     </tr>
-
+    @if($categories->count() > 0)
     @foreach ($categories as $category)
 
     <tr>
@@ -86,6 +86,7 @@
     </tr>
 
     @endforeach
+    @endif
 
 </table>
 

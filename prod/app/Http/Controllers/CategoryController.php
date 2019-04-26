@@ -124,5 +124,15 @@ class CategoryController extends Controller {
         return redirect()->route('category.index')
                         ->with('success', 'Category deleted successfully');
     }
+    
+        public function myPagination()
+
+    {
+
+        $categories = Category::paginate(5);
+
+        return view('myPagination',compact('$categories'));
+
+    }
 
 }

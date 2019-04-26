@@ -15,7 +15,9 @@ Route::resource('category','CategoryController');
 
 Route::resource('products','ProductController');
 
+Route::get('mypagination', 'CategoryController@myPagination');
 
+Route::get('mypagination', 'ProductController@myPagination');
 
 Route::get('/', function () {
     return view('welcome');

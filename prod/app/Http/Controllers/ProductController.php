@@ -129,5 +129,15 @@ class ProductController extends Controller {
         return redirect()->route('products.index')
                         ->with('success', 'Product deleted successfully');
     }
+    
+    public function myPagination()
+
+    {
+
+        $products = Products::paginate(5);
+
+        return view('myPagination',compact('$products'));
+
+    }
 
 }

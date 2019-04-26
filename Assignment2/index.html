@@ -22,7 +22,6 @@
 <!-- bxSlider Javascript file -->
 <!--<script src="js/jquery.bxslider.min.js"></script>-->
 <script src="js/script.js"> </script>
-<script src="Assignment2/assignment2JS.js" type="text/javascript"></script>
 <!-- bxSlider CSS file -->
 <!--<link href="css/jquery.bxslider.css" rel="stylesheet" />-->
 <!-- Responsive -->
@@ -120,7 +119,7 @@
 			<div class="contect_text">So we can successfully match your details with suitable people, we first need to collect some information about you. Read each question carfully and  select or place a tick in the box for each of your characteristics. Please answer as honestly as you can, otherwise you may be disappointed with your matches and they with you.</div>
 
 			<div class="form_container_block">
-                            <form name="myform">
+                            <form name="myform" onsubmit="return Validation()" method="POST">
 				<ul>
                                     
 					<li class="fileds">
@@ -292,7 +291,7 @@
 <!--                                            
 -->						<div class="age_fileds">
 							<label>Age</label>
-                                                        <input name="age" id="Age" readonly type="text" value=""/> <span id="Age1"></span> 
+                                                        <input name="age" id="age" readonly type="text" value=""/> <span id="Age1"></span> 
 						</div>
                                             
 						<div class="gender_fileds">
@@ -313,22 +312,17 @@
 							</ul>
 						</div>
 						<div class="about_you_fileds">
-                                                    <!--
-						<label>About you</label> 
-                                                    
-                                                <input type="text" id="about" >
-						<textarea></textarea> -->
                                                     
                                                     <label>About You</label>
                                                     <textarea id="myTextarea"></textarea>
-                                                        
+                                                </div>   
                                                      
 <!--                                                    <label id="demo"> </label>-->
                        
 
                                                     
                                                     
-						</div>	
+						
                                             
                                             
 					</li>
@@ -343,7 +337,7 @@
 					<!--	
                                         <a href="partners_preference_form.html"> Proceed to Step 2 <span><img src="images/small_triangle.png" alt="small_triangle"> </span></a> -->
                                        
-                                        <input type="submit" value="Submit" onclick="return Validation()">
+                                        <input type="submit" value="Submit" >
                                         
 					</div>
                                     
@@ -529,6 +523,8 @@ Live a life without regrets and take action today!</p>
 <!--wrapper-starts-->
 
 <script type="text/javascript" src="js/jquery.js"></script>	
+<script src="http://localhost/assignment_1/Assignment2/assignment2JS.js" type="text/javascript"></script>
+
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('.select').each(function(){

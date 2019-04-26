@@ -51,7 +51,7 @@
         <th width="280px">Action</th>
 
     </tr>
-
+    @if($products->count() > 0)
     @foreach ($products as $product)
 
     <tr>
@@ -88,7 +88,7 @@
     </tr>
 
     @endforeach
-
+    @endif
 </table>
 
 
